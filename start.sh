@@ -18,7 +18,6 @@ do
         if [[ $var4 != ""  ]];then
             if [[ $var5 == '1' ]]; then
                 
-                echo $var3 force ssl 
                 cat << EOF> $NGINX_DIR/$var3
 server {
     listen 443 ssl;
@@ -42,7 +41,6 @@ server {
 }
 EOF
             else
-                echo $var3 sslon 
                 cat << EOF> $NGINX_DIR/$var3
 server {
 
@@ -75,7 +73,6 @@ EOF
                 
             fi
         else
-            echo $var3 ssloff
             cat << EOF> $NGINX_DIR/$var3
 server {
     listen 80;
