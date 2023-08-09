@@ -138,3 +138,5 @@ EOF
 
     fi
 done < suspend.list
+
+systemctl reload nginx
